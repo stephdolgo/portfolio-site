@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Nunito';
+  font-weight: 400;
+  font-style: normal;
+  src: url('~assets/fonts/Nunito/Nunito-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-weight:700;
+  font-style: normal;
+  src: url('~assets/fonts/Nunito/Nunito-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto';
+  font-weight: 700;
+  font-style: normal;
+  src: url('~assets/fonts/Noto_Serif/NotoSerif-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto';
+  font-weight: 400;
+  font-style: normal;
+  src: url('~assets/fonts/Noto_Serif/NotoSerif-Regular.ttf') format('truetype');
+}
+
+// Font SCSS Variables
+
+$font-serif: "Noto Serif", "Lucida Bright", "Times New Roman", serif;
+$font-sans: "Nunito", sans-serif;
+
+//Global
+
+body, html {
+  font-family: $font-sans;
+  font-weight: 400;
+  color: var(--dark);
+}
+
+.display-font {
+  font-family: $font-serif;
+}
+
+h1 {
+  font-family: $font-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
+}

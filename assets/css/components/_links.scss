@@ -1,0 +1,19 @@
+a {
+  text-decoration: underline;
+  color: #000;
+  
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+a.light-link {
+  text-decoration: none;
+  color: var(--light);
+  opacity: 1;
+
+  &:hover {
+    opacity: .5;
+  }
+}

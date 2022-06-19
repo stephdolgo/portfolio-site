@@ -1,0 +1,48 @@
+// Padding Modifiers
+
+$spacer: 1rem !default;
+
+.padding {
+  padding-top: ($spacer * 5);
+  padding-bottom: ($spacer * 5);
+
+  @include lg {
+      padding-top: ($spacer * 10);
+      padding-bottom: ($spacer * 10);
+    }
+}
+
+.padding-bottom {
+  padding-top: 0;
+  padding-bottom:  ($spacer * 5);
+
+  @include lg {
+      padding-top: 0;
+      padding-bottom: ($spacer * 10);
+    }
+}
+
+.padding-top {
+  padding-top: ($spacer * 5);
+  padding-bottom:  0;
+
+  @include lg {
+      padding-top: ($spacer * 10);
+      padding-bottom: 0;
+    }
+}
+
+.padding-bottom-extra {
+  padding-bottom:  ($spacer * 5);
+
+  @include lg {
+    padding-bottom: ($spacer * 20);
+  }
+}
+
+.padding-top-extra {
+  padding-top: $spacer;
+  @include lg {
+    padding-top: ($spacer * 18);
+  }
+}

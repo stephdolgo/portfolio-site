@@ -1,0 +1,29 @@
+:root {
+    // Brand Colors
+    --light-pink: #FFEBEB;
+    --dark-pink: #F2BED8;
+    --hot-pink: #E162A5;
+    --purple: #230573;
+    --yellow: #FFF700;
+    --black: #000;
+    --white: #FFF;
+
+    // Section backgrounds (repetitive, but future-proofed)
+    --hero: var(--purple);
+    --gallery: var(--light-pink);
+    --about: var(--light-pink);
+    --contact: var(--light-pink);
+    --footer: var(--black);
+
+    // Font colors reflect if they are on a dark vs light background
+    --light: var(--white); 
+    --dark: var(--black);
+
+    // Accents (for small components like buttons)
+    --accent-primary: var(--light-pink);
+    --accent-secondary: var(--dark-pink);
+    --accent-tert: var(--hot-pink);
+    --accent-fourth: var(--purple);
+    --accent-fifth: var(--yellow);
+
+  }
