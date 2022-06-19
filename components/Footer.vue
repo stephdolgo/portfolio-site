@@ -3,7 +3,7 @@
     <div class="grid-inner">
       <div class="footer-links">
         <ul class="footer-links--main">
-          <li><a href="./resume.pdf">View Resume</a></li>
+          <li><a href="./docs/resume.pdf">View Resume</a></li>
           <li><a href="mailto:stephdolgo@gmail.com?subject=Inquiry:">Send Email</a></li>
         </ul>
         <ul class="footer-links--social">
