@@ -34,14 +34,14 @@
             },
             onMouseEnter() {
                 //console.log('mouse enter');
-                console.log(this.customCursorShow);
                 this.customCursorShow = true;
                 this.$el.addEventListener('mousemove', this.onMouseMove, false);
             },
             onMouseLeave() {
                 //console.log('mouse leave');
-                console.log(this.customCursorShow);
                 this.customCursorShow = false;
+                this.posY = 0;
+                this.posX = 0;
                 this.$el.addEventListener('mousemove', this.onMouseLeave, false);
             },
             growMouse() {
