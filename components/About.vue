@@ -8,8 +8,9 @@
         <h2>About</h2>
         <div>
           <p>
-            Lorem Ipsum
-          </p>          
+            Currently I work for Syracuse University🍊 creating
+            style guides, illustrations and graphics for online course development.
+          </p>     
         </div>
       </div>
     </div>
