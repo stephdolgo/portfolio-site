@@ -27,10 +27,10 @@ $screen-xl-min: 1200px; // Large tablets and desktops
     [fill-end];
   @include lg {
     grid-template-columns: 
-    [fill-start] 2fr 
+    [fill-start] 1.5fr 
     [main-start] 1fr
     repeat(11, [col-main] 1fr)
-    [main-end] 2fr 
+    [main-end] 1.5fr 
     [fill-end];
   }
   .grid-outer {
