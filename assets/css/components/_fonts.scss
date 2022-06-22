@@ -2,33 +2,34 @@
   font-family: 'Nunito';
   font-weight: 400;
   font-style: normal;
-  src: url('~assets/fonts/Nunito/Nunito-Regular.ttf') format('truetype');
+  src: local('Nunito'), url('~assets/fonts/Nunito/Nunito-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Nunito';
   font-weight:700;
-  font-style: normal;
-  src: url('~assets/fonts/Nunito/Nunito-Bold.ttf') format('truetype');
+  font-style: bold;
+  src:  local('Nunito-Bold'), url('~assets/fonts/Nunito/Nunito-Bold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Noto';
+  font-family: 'NotoSerif-bold';
   font-weight: 700;
-  font-style: normal;
-  src: url('~assets/fonts/Noto_Serif/NotoSerif-Bold.ttf') format('truetype');
+  font-style: bold;
+  src: local('NotoSerif-Bold'), url('~assets/fonts/Noto_Serif/notoserif-bold-webfont.woff') format('web open font format');
 }
 
 @font-face {
-  font-family: 'Noto';
+  font-family: 'NotoSerif-regular';
   font-weight: 400;
   font-style: normal;
-  src: url('~assets/fonts/Noto_Serif/NotoSerif-Regular.ttf') format('truetype');
+  src: local('NotoSerif-Regular'), url('~assets/fonts/Noto_Serif/notoserif-regular-webfont.woff') format('web open font format');
 }
 
 // Font SCSS Variables
 
-$font-serif: "Noto Serif", "Lucida Bright", "Times New Roman", serif;
+$font-serif--regular: "Noto Serif-regular", "Lucida Bright", "Times New Roman", serif;
+$font-serif--bold: "Noto Serif-bold", "Lucida Bright", "Times New Roman", serif;
 $font-sans: "Nunito", sans-serif;
 
 //Global
@@ -36,22 +37,22 @@ $font-sans: "Nunito", sans-serif;
 body, html {
   font-family: $font-sans;
   font-weight: 400;
+  font-style: normal;
   color: var(--dark);
 }
 
 .display-font {
-  font-family: $font-serif;
+  font-family: $font-serif--regular;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.header-serif {
+  font-family: $font-sans;
+  font-weight: 700;
+  font-style: bold;
 }
 
 h1 {
-  font-family: $font-serif;
-  font-weight: 700;
-}
-
-h2 {
-  font-weight: bold;
-}
-
-h3 {
-  font-weight: bold;
+  font-family: $font-serif--bold;
 }
