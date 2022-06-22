@@ -1,7 +1,9 @@
 <template>
   <div class="grid-none"> 
+    <ProgressBar />
     <Header :anchorLink="Header.anchorLink" />
     <About />
+    <Projects />
     <Contact />
   </div>
 </template>
