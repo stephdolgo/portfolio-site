@@ -1,16 +1,22 @@
 <template>
     <section id="contact" class="grid-container padding">
         <div class="grid-inner">
-            <h3 class="display-font">
+            <h2 class="display-font">
                 Let's make memorable experiences together.
-            </h3>
+            </h2>
             <ul>
-                <li>Say Hello</li>
-                <li>View Resume</li>
+                <li><a a href="mailto:stephdolgo@gmail.com?subject=Inquiry:" class="underline-link">Say Hello</a></li>
+                <li><a href="./docs/resume.pdf" class="underline-link">View Resume</a></li>
             </ul>
         </div>  
     </section>
 </template>
+
+<script>
+    export default {
+        name: 'Contact'
+    }
+</script>
 
 <style lang="scss">
     #contact {
@@ -21,8 +27,9 @@
         align-self: end; 
         position: sticky;
 
-        h3 {
-            font-size: 20px;
+        h2 {
+            font-size: 32px;
+            margin: 1.25em 0;
         }
 
         ul {
@@ -32,14 +39,9 @@
         
         ul li {
             display: inline;
-            font-size: 1rem;
+            font-weight: 700;
+            font-size: 18px;
             padding: 1em 3em;
         }  
     }
 </style>
-
-<script>
-    export default {
-        name: 'Contact'
-    }
-</script>
