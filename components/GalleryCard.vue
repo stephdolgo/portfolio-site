@@ -51,7 +51,7 @@ figure {
             top: 0;
             left: 0;
             width: auto;
-            height: 400px;
+            height: 450px;
             overflow: hidden;
 
             img {
@@ -67,13 +67,41 @@ figure {
             img {
                 transform: scale(2);
             }
+            figcaption {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
         }
 
         figcaption {
             position: absolute;
-            margin: 10px 20px;
             bottom: 0;
             left: 0;
+            margin: 0;
+            background: rgb(255,255,255);
+            background: linear-gradient
+                        (180deg, rgba(255,235,235,0.93) 0%, 
+                        rgba(255,255,255,1) 100%);
+            color: var(--dark);
+            border-radius: 0 50px 0 0;
+            width: 80%;
+            height: 35%;
+            padding: 10px 20px;
+            transition: 0.5s all ease-out;
+            transform: translate3d(0, 100px, 0);
+            opacity: 0;
+
+            h4 {
+                font-size: 24px;
+                margin-bottom: 0;
+                margin-top: 18px;
+            }
+
+            p {
+                font-size: 17px;
+                margin-top: 3px;
+            }
+
         }
     }
 }
