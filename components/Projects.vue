@@ -16,7 +16,7 @@
             v-for="galleryCard in galleryCards"
             :key="galleryCard.id"
             :title="galleryCard.title"
-            :info="galleryCard.subtitle"
+            :info="galleryCard.info"
             :link="galleryCard.link"
             :img="galleryCard.img"
           >
