@@ -1,7 +1,7 @@
 <template>
     <div class="circle-cursor" 
          :class="{ 'circle-cursor--hide': !customCursorShow, 
-         'circle-cursor--lg': cursorGrow, 'circle-cursor--sm': cursorShrink   }"
+         'circle-cursor--lg': cursorGrow, 'circle-cursor--sm': cursorShrink,  }"
          :style="{ 'top': posY + 'px', 'left': posX + 'px'}"
       >
       </div>
@@ -10,9 +10,6 @@
 <script>
     export default {
         name: 'CustomCursor',
-        async mounted() {
-            await this.$nextTick();          
-        },
         data() {
             return {
                 customCursorShow: false,
@@ -20,29 +17,25 @@
                 cursorShrink: true,
                 posY: 0,
                 posX: 0,
-                offset: 15
+                offsetX: 40,
+                offsetY: 40
             }
-        },
-        destroyed() {
-                
         },
         methods: {
             onMouseMove(e) {
                 //console.log(this.posY, this.posX)
-                this.posY = e.clientY - this.offset;
-                this.posX = e.clientX - this.offset;
+                this.posY = e.pageY - this.offsetY;
+                this.posX = e.pageX - this.offsetX;
             },
             onMouseEnter() {
                 //console.log('mouse enter');
                 this.customCursorShow = true;
-                this.$el.addEventListener('mousemove', this.onMouseMove, false);
+                //this.$el.addEventListener('mousemove', this.onMouseMove, false);
             },
             onMouseLeave() {
                 //console.log('mouse leave');
                 this.customCursorShow = false;
-                this.posY = 0;
-                this.posX = 0;
-                this.$el.addEventListener('mousemove', this.onMouseLeave, false);
+                //this.$el.addEventListener('mousemove', this.onMouseLeave, true);
             },
             growMouse() {
                 this.cursorGrow = true;
@@ -63,11 +56,12 @@
         top: 0;
         left: 0;
         pointer-events: none;
-        mix-blend-mode: difference;
-        width: 60px;
-        height: 60px;
+        mix-blend-mode: overlay;
+        width: 80px;
+        height: 80px;
+        border: 4px solid var(--accent-quat);
         border-radius: 50%;
-        background-color: white;
+        background-color: #fff;
         z-index: 1000;
         transition: transform 200ms ease;
         display: block;
@@ -78,6 +72,8 @@
     }
 
     .circle-cursor--lg {
+        mix-blend-mode: difference;
+        border: 2px solid var(--light);
         transform: scale(3);
     }
 
